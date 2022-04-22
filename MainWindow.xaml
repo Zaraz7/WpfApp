@@ -11,7 +11,7 @@
             <Grid>
                 <Image/>
                 <DockPanel>
-                <Menu DockPanel.Dock="Top" Background="#19F300FF">
+                <Menu x:Name="menu" DockPanel.Dock="Top" Background="#FFFCC4FF" Opacity="0.7">
                     <MenuItem Header="Arial" FontFamily="Arial"/>
                     <MenuItem Header="Calibri" FontFamily="Calibri"/>
                     <MenuItem Header="Comic Sans MS" FontFamily="Comic Sans MS"/>
