@@ -23,14 +23,23 @@
                         <MenuItem Header="English" Click="clkEn"/>
                     </MenuItem>
                     <MenuItem Header="Инфо" Name="Info">
-
                     </MenuItem>
                 </Menu>
                 <TextBlock/>
             </DockPanel>
         </TabItem>
         <TabItem Header="Задание 2">
-
+            <TabControl Background="#222">
+                <TabItem Header="Asurrealism">
+                    <Image Source="Resources/Asurrealism.jpg"/>
+                </TabItem>
+                <TabItem Header="border of subconscious">
+                    <Image Source="Resources/border of subconscious.png"/>
+                </TabItem>
+                <TabItem Header="domicky">
+                    <Image Source="Resources/domicky.tif"/>
+                </TabItem>
+            </TabControl>
         </TabItem>
     </TabControl>
 </Window>
