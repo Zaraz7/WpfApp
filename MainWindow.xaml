@@ -33,8 +33,12 @@
                 </Button>
             </Button>
         </TabItem>
-        <TabItem Header="Задание 2">
-
+        <TabItem Header="Задание 2" VerticalAlignment="Center">
+            <StackPanel Margin="10">
+                <TextBox Margin="10"/>
+                <Slider Margin="10"/>
+                <TextBlock Margin="10"/>
+            </StackPanel>
         </TabItem>
     </TabControl>
 </Window>

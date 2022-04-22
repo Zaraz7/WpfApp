@@ -35,9 +35,5 @@ namespace WpfApp
             Debug.WriteLine((byte)r.Next(0, 255));
             currentButton.Background = new SolidColorBrush(Color.FromArgb(90, (byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255)));
         }
-        private void clkLittle(object sender, RoutedEventArgs e)
-        {
-            Debug.WriteLine("Little Button");
-        }
     }
 }
