@@ -6,7 +6,23 @@
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <TabControl>
+        <TabItem Header="Задание 1 - 2">
+            <Grid>
+                <Image/>
+                <DockPanel>
+                <Menu DockPanel.Dock="Top" Background="#19F300FF">
+                    <MenuItem Header="Arial" FontFamily="Arial"/>
+                    <MenuItem Header="Calibri" FontFamily="Calibri"/>
+                    <MenuItem Header="Comic Sans MS" FontFamily="Comic Sans MS"/>
+                    <MenuItem Header="Impact" FontFamily="Impact"/>
+                </Menu>
+                <TextBox Background="#19FFFFFF"/>
+            </DockPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Задание 3">
+
+        </TabItem>
+    </TabControl>
 </Window>
