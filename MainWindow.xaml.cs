@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace WpfApp
 {
@@ -20,9 +21,23 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Random r = new Random();
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void clkBig(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Big Button");
+            Button currentButton = sender as Button;
+            Debug.WriteLine((byte)r.Next(0, 255));
+            currentButton.Background = new SolidColorBrush(Color.FromArgb(90, (byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255)));
+        }
+        private void clkLittle(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Little Button");
         }
     }
 }

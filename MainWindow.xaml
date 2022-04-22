@@ -6,7 +6,35 @@
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <TabControl>
+        <TabControl.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Padding" Value="16"/>
+            </Style>
+        </TabControl.Resources>
+        <TabItem Header="Задание 1">
+            <Button x:Name="bRainbow" Click="clkBig">
+                <Button Click="clkBig">
+                    <Button Click="clkBig">
+                        <Button Click="clkBig">
+                            <Button Click="clkBig">
+                                <Button Click="clkBig">
+                                    <Button Click="clkBig">
+                                        <Button Click="clkBig">
+                                            <Button  Click="clkBig">
+                                                <TextBlock Text="Поменять цвет"/>
+                                            </Button>
+                                        </Button>
+                                    </Button>
+                                </Button>
+                            </Button>
+                        </Button>
+                    </Button>
+                </Button>
+            </Button>
+        </TabItem>
+        <TabItem Header="Задание 2">
+
+        </TabItem>
+    </TabControl>
 </Window>
