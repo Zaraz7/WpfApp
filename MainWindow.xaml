@@ -10,20 +10,19 @@
         <TabControl.Resources>
             <Style TargetType="Button">
                 <Setter Property="Padding" Value="16"/>
+                <EventSetter Event="Click" Handler="clkBig"/>
             </Style>
         </TabControl.Resources>
         <TabItem Header="Задание 1">
-            <Button x:Name="bRainbow" Click="clkBig">
-                <Button Click="clkBig">
-                    <Button Click="clkBig">
-                        <Button Click="clkBig">
-                            <Button Click="clkBig">
-                                <Button Click="clkBig">
-                                    <Button Click="clkBig">
-                                        <Button Click="clkBig">
-                                            <Button  Click="clkBig">
-                                                <TextBlock Text="Поменять цвет"/>
-                                            </Button>
+            <Button>
+                <Button>
+                    <Button>
+                        <Button>
+                            <Button>
+                                <Button>
+                                    <Button>
+                                        <Button>
+                                            <Button Content="Поменять цвет"/>
                                         </Button>
                                     </Button>
                                 </Button>
