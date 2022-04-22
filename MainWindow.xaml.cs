@@ -20,9 +20,29 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MenuLanguage language = new MenuLanguage();
         public MainWindow()
         {
+            language.Ru();
             InitializeComponent();
+            LocalUpdate();
+            
+        }
+        private void clkRu(object sender, RoutedEventArgs e)
+        {
+            language.Ru();
+            LocalUpdate();
+        }
+        private void clkEn(object sender, RoutedEventArgs e)
+        {
+            language.En();
+            LocalUpdate();
+        }
+        private void LocalUpdate()
+        {
+            File.Header = language.File;
+            Lang.Text = language.Lang;
+            Info.Header = language.Info;
         }
     }
 }

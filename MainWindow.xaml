@@ -12,17 +12,17 @@
                 <Menu x:Name="menu" DockPanel.Dock="Top" Height="30">
                     <MenuItem>
                         <MenuItem.Header>
-                            <TextBlock Text="Файл" TextAlignment="Center"/>
+                            <MenuItem Header="Файл" x:Name="File"/>
                         </MenuItem.Header>
                     </MenuItem>
                     <MenuItem>
                         <MenuItem.Header>
-                            <TextBlock Text="Язык" Width="120" TextAlignment="Center"/>
+                            <TextBlock Text="Язык" x:Name="Lang" Width="120" TextAlignment="Center"/>
                         </MenuItem.Header>
-                        <TextBlock Text="Русский"/>
-                        <TextBlock Text="English"/>
+                        <MenuItem Header="Русский" Click="clkRu"/>
+                        <MenuItem Header="English" Click="clkEn"/>
                     </MenuItem>
-                    <MenuItem Header="Инфо">
+                    <MenuItem Header="Инфо" Name="Info">
 
                     </MenuItem>
                 </Menu>
