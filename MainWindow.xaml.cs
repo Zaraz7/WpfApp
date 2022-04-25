@@ -27,8 +27,7 @@ namespace WpfApp
         {
             InitializeComponent();
            
-            calc.StartInfo.FileName = "win32calc.exe";
-            calc.StartInfo.Arguments = "calc.txt";
+            calc.StartInfo.FileName = "calc";
         }
 
         private void clkShowLog(object sender, RoutedEventArgs e)
@@ -39,15 +38,15 @@ namespace WpfApp
         {
             try
             {
-                Process[] proc = Process.GetProcessesByName("win32calc");
-                proc[0].Kill();
+                if (calc.Id > 1)
+                    return;
             }
             catch
             {
+
             }
-            Debug.WriteLine("Запуск кала");
-            //Process.Start(@"C:\Windows\system32\win32calc.exe");
             calc.Start();
+            Debug.WriteLine(calc.Id);
             Debug.WriteLine("Кал должен быть запущен");
         }
     }
