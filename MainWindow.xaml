@@ -18,25 +18,3 @@
         </TabItem>
     </TabControl>
 </Window>
-<!-- 
-﻿<Window x:Class="_18.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:_18"
-        mc:Ignorable="d"
-        Title="Windows Presentation Media Player" Height="450" Width="800">
-    <TabControl>
-        <TabItem Header="Задание 1">
-    <StackPanel>
-        <Button Content="Жать сюда" Click="clkShowLog"/>
-        <TextBlock x:Name="tbLog"/>
-            </StackPanel>
-        </TabItem>
-    <TabItem Header="Задание 2">
-            <Button Content="Калькулятор" Click="clkCal"/>
-        </TabItem>
-    </TabControl>
-</Window>
- -->
