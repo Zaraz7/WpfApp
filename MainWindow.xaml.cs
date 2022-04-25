@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Diagnostics;
+using WpfApp;
 
 namespace WpfApp
 {
@@ -26,28 +27,41 @@ namespace WpfApp
         public MainWindow()
         {
             InitializeComponent();
-           
+            App.logger.Info("Initialize MainWindow");
             calc.StartInfo.FileName = "calc";
+
         }
 
         private void clkShowLog(object sender, RoutedEventArgs e)
         {
+            App.logger.Info("Button pressed");
+            tbLog.Text = "";
+            StreamReader sr = new StreamReader(".\\logs\\2022-04-25.log", Encoding.UTF8);
+            string line = sr.ReadLine();
+            while (line != null)
+            {
+                tbLog.Text += line + "\n";
+                line = sr.ReadLine();
+            }
+            
         }
 
         private void clkCal(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (calc.Id > 1)
+                if (calc.Id > 1) {
+                    App.logger.Info($"ID Calc.exe: {calc.Id}");
                     return;
+                }
             }
-            catch
+            catch (Exception error)
             {
-
+                App.logger.Error(error);
             }
+            App.logger.Info("Execute Call");
             calc.Start();
-            Debug.WriteLine(calc.Id);
-            Debug.WriteLine("Кал должен быть запущен");
+            App.logger.Info($"ID Calc.exe: {calc.Id}");
         }
     }
 }
