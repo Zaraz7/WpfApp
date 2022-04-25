@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Diagnostics;
 
 namespace WpfApp
 {
@@ -20,9 +22,33 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        Process calc = new Process();
         public MainWindow()
         {
             InitializeComponent();
+           
+            calc.StartInfo.FileName = "win32calc.exe";
+            calc.StartInfo.Arguments = "calc.txt";
+        }
+
+        private void clkShowLog(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void clkCal(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Process[] proc = Process.GetProcessesByName("win32calc");
+                proc[0].Kill();
+            }
+            catch
+            {
+            }
+            Debug.WriteLine("Запуск кала");
+            //Process.Start(@"C:\Windows\system32\win32calc.exe");
+            calc.Start();
+            Debug.WriteLine("Кал должен быть запущен");
         }
     }
 }
