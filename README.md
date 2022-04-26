@@ -22,6 +22,20 @@
 				└───"public static void Main()"
 
 3.	Как создать многопоточное приложение в WPF?
+
+```cs
+using System.Threading; // необходимый класс
+ 
+// создаем новый поток
+Thread myThread = new Thread(myFunction); 
+
+// функция нового потока
+void myFunction(){
+	// писать код потока сюда
+}
+ 
+myThread.Start();  // запускаем поток myThread
+```
 	
 4.	С помощью чего можно реализовать межпоточное взаимодействие в приложении?
 
