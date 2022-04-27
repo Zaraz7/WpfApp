@@ -30,7 +30,12 @@
             </Grid>
         </TabItem>
         <TabItem Header="Задание 3">
-
+            <Canvas>
+                <Image Source="Resources/2021-04-04_06_28_58.png" Width="80" Opacity="0.1"/>
+                <Canvas>
+                    
+                </Canvas>
+            </Canvas>
         </TabItem>
     </TabControl>
 </Window>
