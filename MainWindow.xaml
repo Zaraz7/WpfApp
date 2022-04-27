@@ -7,10 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <TabControl>
-        <TabItem>
-            <TabItem.Header>
-                <Label>Задание 1 - 2</Label>
-            </TabItem.Header>
+        <TabControl.Resources>
+            <Style TargetType="MenuItem">
+                <!-- Как и укнопки можно настроить шаблон обработчика собыйтий -->
+                <EventSetter Event="Click" Handler="clkMenu"/>
+                <Setter Property="Foreground" Value="AliceBlue"/>
+            </Style>
+            
+        </TabControl.Resources>
+        <TabItem Header="Задание 1-2">
             <Grid>
                 <Image Source="Resources/2021-04-04_06_28_58.png" Stretch="UniformToFill"/>
                 <DockPanel>
@@ -20,14 +25,11 @@
                     <MenuItem Header="Comic Sans MS" FontFamily="Comic Sans MS"/>
                     <MenuItem Header="Impact" FontFamily="Impact"/>
                 </Menu>
-                <TextBox Background="#19FFFFFF"/>
+                <TextBox x:Name="tbEditor" Background="#19FFFFFF" FontSize="20"/>
             </DockPanel>
             </Grid>
         </TabItem>
-        <TabItem >
-            <TabItem.Header>
-                <Label>Задание 3</Label>
-            </TabItem.Header>
+        <TabItem Header="Задание 3">
 
         </TabItem>
     </TabControl>

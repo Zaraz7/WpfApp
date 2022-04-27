@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Diagnostics;
 
 namespace WpfApp
 {
@@ -18,7 +19,8 @@ namespace WpfApp
         {
             MenuItem menu = (MenuItem)sender;
             string font = menu.Header.ToString();
-            var rd = new ResourceDictionary();
+            Debug.WriteLine(font);
+            //var rd = new ResourceDictionary();
             //rd.Add("Editor")
         }
     }

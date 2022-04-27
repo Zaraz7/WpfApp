@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace WpfApp
 {
@@ -24,6 +25,13 @@ namespace WpfApp
         {
             InitializeComponent();
             
+        }
+
+        private void clkMenu(object sender, RoutedEventArgs e)
+        {
+            MenuItem menu = (MenuItem)sender;
+            Debug.WriteLine(menu.Header.ToString());
+            tbEditor.FontFamily = new FontFamily(menu.Header.ToString());
         }
     }
 }
