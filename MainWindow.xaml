@@ -50,6 +50,7 @@
                 <TextBlock Text="Зарплата" TextAlignment="Center" VerticalAlignment="Center"/>
 
                 <Slider Name="sCredit" Maximum="1" Grid.Row="1" Grid.Column="1" Margin="10" ValueChanged="vcPersent"/>
+                <!-- StringFormat - спосод предстваления привязанных дынных. В данном случае P2 - формат процента, округленный до 2 -->
                 <TextBlock Text="{Binding ElementName=sCredit, Path=Value, StringFormat={}{0:P2}}" Grid.Row="1" TextAlignment="Center" VerticalAlignment="Center"/>
 
                 <TextBlock x:Name="tbReturnSalary" Grid.Column="1" Grid.Row="2" Margin="10"/>

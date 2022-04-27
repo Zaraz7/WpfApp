@@ -50,8 +50,10 @@ namespace WpfApp
         {
             try { 
                 salary = Convert.ToInt32(tbSalary.Text);         
-                tbReturnSalary.Text = (salary * sCredit.Value).ToString();
-            
+                tbReturnSalary.Text = Math.Round(salary * sCredit.Value, 2).ToString() + " руб.";
+                tbWorning.Text = "";
+
+
             }
             catch
             {
