@@ -23,22 +23,16 @@ namespace WpfApp
     public partial class MainWindow : Window
     {
         private Random r = new Random(); // Содание модуля рандома
-        private int salary = 0;
         public MainWindow()
         {
             InitializeComponent();
 
         }
 
-        private void SalaryChange()
-            {
-
-            
-            }
         private void clkBig(object sender, RoutedEventArgs e)
         {
             Debug.WriteLine("Big Button");
-            // sender = это по сути и есть та кнопка с которой и произодиться нажатие
+            // sender - это по сути и есть та кнопка с которой и произодиться нажатие
             Button currentButton = sender as Button;
             Debug.WriteLine((byte)r.Next(0, 255));
             // Изменение цвета по рандому, с помощью SolidColorBrush
@@ -49,11 +43,10 @@ namespace WpfApp
         private void vcPersent(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             try { 
-                salary = Convert.ToInt32(tbSalary.Text);         
+                double salary = Convert.ToDouble(tbSalary.Text);
+                // Округлим до сотых и укажим валюту
                 tbReturnSalary.Text = Math.Round(salary * sCredit.Value, 2).ToString() + " руб.";
                 tbWorning.Text = "";
-
-
             }
             catch
             {
