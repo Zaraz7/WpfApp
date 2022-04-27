@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <TabControl>
-        <TabControl.Resources>
+        <!-- Применить ко всем кнопкам в этой вкладке данный ресурс -->
+            <TabControl.Resources>
             <Style TargetType="Button">
                 <Setter Property="Padding" Value="16"/>
-                <EventSetter Event="Click" Handler="clkBig"/>
+                <!-- Общяя для всех нопок функция нажатия -->
+                    <EventSetter Event="Click" Handler="clkBig"/>
             </Style>
         </TabControl.Resources>
         <TabItem Header="Задание 1">
@@ -34,8 +36,8 @@
         </TabItem>
         <TabItem Header="Задание 2" VerticalAlignment="Center">
             <StackPanel Margin="10">
-                <TextBox Margin="10"/>
-                <Slider Margin="10"/>
+                <TextBox Margin="10" />
+                <Slider Margin="10" />
                 <TextBlock Margin="10"/>
             </StackPanel>
         </TabItem>
