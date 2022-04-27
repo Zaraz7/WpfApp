@@ -7,11 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <TabControl>
-        <TabItem Header="Задание 1 - 2">
+        <TabItem>
+            <TabItem.Header>
+                <Label>Задание 1 - 2</Label>
+            </TabItem.Header>
             <Grid>
-                <Image/>
+                <Image Source="Resources/2021-04-04_06_28_58.png" Stretch="UniformToFill"/>
                 <DockPanel>
-                <Menu x:Name="menu" DockPanel.Dock="Top" Background="#FFFCC4FF" Opacity="0.7">
+                <Menu x:Name="menu" DockPanel.Dock="Top" Opacity="0.7" Background="#FF444444">
                     <MenuItem Header="Arial" FontFamily="Arial"/>
                     <MenuItem Header="Calibri" FontFamily="Calibri"/>
                     <MenuItem Header="Comic Sans MS" FontFamily="Comic Sans MS"/>
@@ -21,7 +24,10 @@
             </DockPanel>
             </Grid>
         </TabItem>
-        <TabItem Header="Задание 3">
+        <TabItem >
+            <TabItem.Header>
+                <Label>Задание 3</Label>
+            </TabItem.Header>
 
         </TabItem>
     </TabControl>

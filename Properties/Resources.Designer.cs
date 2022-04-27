@@ -59,5 +59,15 @@ namespace WpfApp.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2021_04_04_06_28_58 {
+            get {
+                object obj = ResourceManager.GetObject("_2021_04_04_06_28_58", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
