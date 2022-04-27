@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using System.Threading;
 
 namespace WpfApp
 {
@@ -22,12 +23,18 @@ namespace WpfApp
     public partial class MainWindow : Window
     {
         private Random r = new Random(); // Содание модуля рандома
+        private int salary = 0;
         public MainWindow()
         {
             InitializeComponent();
-            
+
         }
 
+        private void SalaryChange()
+            {
+
+            
+            }
         private void clkBig(object sender, RoutedEventArgs e)
         {
             Debug.WriteLine("Big Button");
@@ -39,5 +46,17 @@ namespace WpfApp
             currentButton.Background = new SolidColorBrush(Color.FromArgb(90, (byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255)));
         }
 
+        private void vcPersent(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            try { 
+                salary = Convert.ToInt32(tbSalary.Text);         
+                tbReturnSalary.Text = (salary * sCredit.Value).ToString();
+            
+            }
+            catch
+            {
+                tbWorning.Text = "Неверный чиловой формат";
+            }
+        }
     }
 }
