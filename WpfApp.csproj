@@ -113,5 +113,8 @@
     <Resource Include="Resources\Reznia\image_part_005.jpg" />
     <Resource Include="Resources\Reznia\image_part_006.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\image-not-found.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

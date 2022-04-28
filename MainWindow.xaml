@@ -31,10 +31,12 @@
         </TabItem>
         <TabItem Header="Задание 3">
             <WrapPanel>
-                <WrapPanel.Resources>
-                    
-                </WrapPanel.Resources>
                 <UniformGrid Width="300" Height="168" Columns="3" Rows="2" AllowDrop="True">
+                <UniformGrid.Resources>
+                    <Style TargetType="Image">
+                        <EventSetter Event="MouseDown" Handler="imageDown"/>
+                    </Style>
+                </UniformGrid.Resources>
                     <Image Source="Resources/Reznia/image_part_002.jpg"/>
                     <Image Source="Resources/Reznia/image_part_005.jpg"/>
                     <Image Source="Resources/Reznia/image_part_003.jpg"/>
@@ -42,7 +44,20 @@
                     <Image Source="Resources/Reznia/image_part_001.jpg"/>
                     <Image Source="Resources/Reznia/image_part_004.jpg"/>
                 </UniformGrid>
-                <UniformGrid Width="300" Height="168" Columns="3" Rows="2" AllowDrop="True" Drop="imgDrop">
+                <UniformGrid Width="300" Height="168" Columns="3" Rows="2" Background="Beige">
+                    <UniformGrid.Resources>
+                        <Style TargetType="Image">
+                            <EventSetter Event="Drop" Handler="imgDrop"/>
+                            <Setter Property="AllowDrop" Value="True"/>
+                            <Setter Property="Source" Value="Resources/image-not-found.png"/>
+                        </Style>
+                    </UniformGrid.Resources>
+                    <Image/>
+                    <Image/>
+                    <Image/>
+                    <Image/>
+                    <Image/>
+                    <Image/>
                 </UniformGrid>
 
             </WrapPanel>

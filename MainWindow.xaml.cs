@@ -34,9 +34,28 @@ namespace WpfApp
             tbEditor.FontFamily = new FontFamily(menu.Header.ToString());
         }
 
+        private void imageDown(object sender, MouseButtonEventArgs e)
+        {
+            Debug.WriteLine("imageDowm");
+            Image img = (Image)sender;
+            // h
+            Debug.WriteLine($"img.Source = {img.Source}");
+            DragDrop.DoDragDrop(img, img.Source, DragDropEffects.Copy);
+        }
+
         private void imgDrop(object sender, DragEventArgs e)
         {
-
+            Debug.WriteLine("imgDrop");
+            Debug.WriteLine(e.OriginalSource);
+            Debug.WriteLine($"e.Data = {e.Data}");
+            var img2 = e.OriginalSource as Image;
+            var img = e.Source as Image;
+            Debug.WriteLine($"img = {img}");
+            Debug.WriteLine($"img.Source = {img.Source}");
+            Debug.WriteLine($"img2.Source = {img2.Source}");
+            //Debug.WriteLine();
+            ((Image)sender).Source = img.Source as ImageSource;
         }
+
     }
 }
