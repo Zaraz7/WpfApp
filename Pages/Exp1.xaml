@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp.Pages"
         mc:Ignorable="d"
-        Title="Exp1" Height="100" Width="500">
+        Title="Exp1" Height="100" Width="500" Closing="Window_Closing">
     <TextBlock Text="Окно"/>
 </Window>

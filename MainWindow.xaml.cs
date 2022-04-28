@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace WpfApp
 {
@@ -37,6 +38,11 @@ namespace WpfApp
         {
             if (index == 5)
                 index = 0;
+            Debug.WriteLine("");
+            foreach (Window w in windowsArray)
+            {
+                Debug.Write(w.Title);
+            }
             
             //windowsArray[index].
             windowsArray[index].Show();
@@ -44,5 +50,6 @@ namespace WpfApp
             
 
         }
+
     }
 }
