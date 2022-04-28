@@ -34,10 +34,7 @@ Window унаследывается от ContentControl, который може
 - 
 4.	Как создать окно нестандартной формы?
 ```xml
-<Window 
-<!-- методанные окна -->
-AllowTransparency = true
-WindowsStyle = None
+<Window AllowTransparency="true" WindowsStyle="None">
 <!-- установить изображение с прозрачными областями -->
-/>
+</Window>
 ```
