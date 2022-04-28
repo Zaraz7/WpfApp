@@ -105,5 +105,13 @@
   <ItemGroup>
     <Resource Include="Resources\2021-04-04_06_28_58.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Reznia\image_part_001.jpg" />
+    <Resource Include="Resources\Reznia\image_part_002.jpg" />
+    <Resource Include="Resources\Reznia\image_part_003.jpg" />
+    <Resource Include="Resources\Reznia\image_part_004.jpg" />
+    <Resource Include="Resources\Reznia\image_part_005.jpg" />
+    <Resource Include="Resources\Reznia\image_part_006.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
