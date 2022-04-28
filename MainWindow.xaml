@@ -25,7 +25,7 @@
                     <MenuItem Header="Comic Sans MS" FontFamily="Comic Sans MS"/>
                     <MenuItem Header="Impact" FontFamily="Impact"/>
                 </Menu>
-                <TextBox x:Name="tbEditor" Background="#19FFFFFF" FontSize="20"/>
+                <TextBox x:Name="tbEditor" Background="#19FFFFFF" FontSize="20" FontFamily="/WpfApp;component/Resources/#IBM Plex Sans Medium"/>
             </DockPanel>
             </Grid>
         </TabItem>
