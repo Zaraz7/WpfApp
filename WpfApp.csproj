@@ -97,6 +97,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="README.md" />
+    <Resource Include="Resources\IBMPlexSans-Medium.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
