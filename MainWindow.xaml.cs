@@ -33,5 +33,10 @@ namespace WpfApp
             Debug.WriteLine(menu.Header.ToString());
             tbEditor.FontFamily = new FontFamily(menu.Header.ToString());
         }
+
+        private void imgDrop(object sender, DragEventArgs e)
+        {
+
+        }
     }
 }

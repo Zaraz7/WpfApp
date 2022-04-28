@@ -18,5 +18,8 @@
         <Style TargetType="Label">
             <Setter Property="Foreground" Value="#222"/>
         </Style>
+        <Style TargetType="UniformGrid">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
     </Application.Resources>
 </Application>
