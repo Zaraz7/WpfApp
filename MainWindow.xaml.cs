@@ -24,5 +24,10 @@ namespace WpfApp
         {
             InitializeComponent();
         }
+
+        private void expression1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
