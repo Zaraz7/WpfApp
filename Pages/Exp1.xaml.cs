@@ -24,6 +24,7 @@ namespace WpfApp.Pages
         {
             InitializeComponent();
         }
+        // Вместо того, чтобы закрывать окна, они становяться скрытыми
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;

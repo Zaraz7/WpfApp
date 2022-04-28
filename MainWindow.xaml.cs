@@ -21,12 +21,15 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Индекс окна
         private int index = 0;
+        // Массив окон
         private Window[] windowsArray = new Pages.Exp1[5];
         public MainWindow()
         {
             InitializeComponent();
  
+            // Создание окон с уникальными именами
             for (int i = 0; i < 5; i++)
             {
                 windowsArray[i] = new Pages.Exp1();
@@ -36,13 +39,9 @@ namespace WpfApp
 
         private void expression1(object sender, RoutedEventArgs e)
         {
+            // Не позволяем открывать больще 5 окон
             if (index == 5)
                 index = 0;
-            Debug.WriteLine("");
-            foreach (Window w in windowsArray)
-            {
-                Debug.Write(w.Title);
-            }
             
             //windowsArray[index].
             windowsArray[index].Show();
