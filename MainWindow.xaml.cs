@@ -20,13 +20,28 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int index = 0;
+        private Window[] windowsArray = new Pages.Exp1[5];
         public MainWindow()
         {
             InitializeComponent();
+ 
+            for (int i = 0; i < 5; i++)
+            {
+                windowsArray[i] = new Pages.Exp1();
+                windowsArray[i].Title = $"Окно №{i+1}";
+            }
         }
 
         private void expression1(object sender, RoutedEventArgs e)
         {
+            if (index == 5)
+                index = 0;
+            
+            //windowsArray[index].
+            windowsArray[index].Show();
+            index += 1;
+            
 
         }
     }
