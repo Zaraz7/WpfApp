@@ -15,25 +15,27 @@ using System.Windows.Shapes;
 namespace WpfApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Exp1.xaml
+    /// Логика взаимодействия для Exp12.xaml
     /// </summary>
-    public partial class Exp1 : Window
+    public partial class Exp12 : Window
     {
-        public string textCheck;
-        public Exp1()
+        public Exp12()
         {
             InitializeComponent();
-            Left = Properties.Settings.Default.Exp11.Left;
-            Top = Properties.Settings.Default.Exp11.Top;
+            Left = Properties.Settings.Default.Exp12.Left;
+            Top = Properties.Settings.Default.Exp12.Top;
 
-            Width = Properties.Settings.Default.Exp11.Width;
-            Height = Properties.Settings.Default.Exp11.Height;
+            Width = Properties.Settings.Default.Exp12.Width;
+            Height = Properties.Settings.Default.Exp12.Height;
         }
 
+
+
+        // Вместо того, чтобы закрывать окна, они становяться скрытыми
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             // Сохранение разрешения в пользовательсикх настройках
-            Properties.Settings.Default.Exp11 = this.RestoreBounds;
+            Properties.Settings.Default.Exp12 = this.RestoreBounds;
             Properties.Settings.Default.Save();
 
             // Вместо того, чтобы закрывать окна, они становяться скрытыми

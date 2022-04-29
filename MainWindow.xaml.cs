@@ -24,24 +24,24 @@ namespace WpfApp
         // Индекс окна
         private int index = 0;
         // Массив окон
-        private Window[] windowsArray = new Pages.Exp1[5];
+        private Window[] windowsArray = new Window[3];
         public MainWindow()
         {
             InitializeComponent();
  
-            // Создание окон с уникальными именами
-            for (int i = 0; i < 5; i++)
-            {
-                windowsArray[i] = new Pages.Exp1();
-                windowsArray[i].Title = $"Окно №{i+1}";
-            }
+            
         }
 
         private void expression1(object sender, RoutedEventArgs e)
         {
+            // Наполнение массива окон объектами и их переименовывание
+            windowsArray[0] = new Pages.Exp1();
+            windowsArray[1] = new Pages.Exp12();
+            windowsArray[2] = new Pages.Exp13();
+
             // Не позволяем открывать больще 5 окон
-            if (index == 5)
-                index = 0;
+            foreach (Window w in windowsArray)
+                w.Show();
             
             //windowsArray[index].
             windowsArray[index].Show();

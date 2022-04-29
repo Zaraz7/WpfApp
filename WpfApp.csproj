@@ -56,6 +56,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\Exp12.xaml.cs">
+      <DependentUpon>Exp12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Exp13.xaml.cs">
+      <DependentUpon>Exp13.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -70,6 +76,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\Exp1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Exp12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Exp13.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
