@@ -8,12 +8,12 @@
         Title="MainWindow" Height="450" Width="800">
     <Window.CommandBindings>
         <CommandBinding Command="New" Executed="NewExecute"/>
-        <CommandBinding Command="New" Executed="OpenExecute"/>
-        <CommandBinding Command="New" Executed="SaveExecute"/>
-        <CommandBinding Command="New" Executed="CloseExecute"/>
-        <CommandBinding Command="New" Executed="CutExecute"/>
-        <CommandBinding Command="New" Executed="CopyExecute"/>
-        <CommandBinding Command="New" Executed="PasteExecute"/>
+        <CommandBinding Command="Open" Executed="OpenExecute"/>
+        <CommandBinding Command="Save" Executed="SaveExecute"/>
+        <CommandBinding Command="Close" Executed="CloseExecute"/>
+        <CommandBinding Command="Cut" Executed="CutExecute"/>
+        <CommandBinding Command="Copy" Executed="CopyExecute"/>
+        <CommandBinding Command="Paste" Executed="PasteExecute"/>
     </Window.CommandBindings>
     <TabControl>
         <TabItem Name="tiExp1" Header="Задание 1-2">
