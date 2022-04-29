@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:WpfApp.Pages"
         mc:Ignorable="d"
         Title="TextEditor" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+    <DockPanel>
+        <Menu x:Name="menu" DockPanel.Dock="Top" Opacity="0.7" Background="#FF444444">
+            <MenuItem Header="Arial" FontFamily="Arial"/>
+            <MenuItem Header="Calibri" FontFamily="Calibri"/>
+            <MenuItem Header="Comic Sans MS" FontFamily="Comic Sans MS"/>
+            <MenuItem Header="Impact" FontFamily="Impact"/>
+        </Menu>
+        <TextBox x:Name="tbEditor" Background="#19FFFFFF" FontSize="20" FontFamily="/WpfApp;component/Resources/#IBM Plex Sans Medium"/>
+    </DockPanel>
 </Window>

@@ -9,6 +9,6 @@
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button Content="Задание 1: 5 окон" Click="expression1"/>
         <Button Content="Задание 2: 8 Ball" Click="expression2"/>
-        <Button Content="Задание 3: Текстовый редактор"/>
+        <Button Content="Задание 3: Текстовый редактор" Click="expression3"/>
     </StackPanel>
 </Window>

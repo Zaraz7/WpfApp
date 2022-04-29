@@ -54,5 +54,10 @@ namespace WpfApp
         {
             new Pages.Ball().ShowDialog();
         }
+
+        private void expression3(object sender, RoutedEventArgs e)
+        {
+            new Pages.TextEditor().ShowDialog();
+        }
     }
 }
