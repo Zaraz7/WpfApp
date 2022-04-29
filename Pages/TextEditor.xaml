@@ -7,15 +7,22 @@
         mc:Ignorable="d"
         Title="TextEditor" Height="450" Width="800">
     <Window.Background>
-        <ImageBrush/>
+        <ImageBrush ImageSource="/WpfApp;component/Resources/2021-04-04_06_28_58.png"/>
     </Window.Background>
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+    </Window.Resources>
     <DockPanel>
-        <Menu x:Name="menu" DockPanel.Dock="Top" Opacity="0.7" Background="#FF444444">
-            <MenuItem Header="Arial" FontFamily="Arial"/>
-            <MenuItem Header="Calibri" FontFamily="Calibri"/>
-            <MenuItem Header="Comic Sans MS" FontFamily="Comic Sans MS"/>
-            <MenuItem Header="Impact" FontFamily="Impact"/>
+        <Menu x:Name="menu" DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть" Click="clkOpen"/>
+                <MenuItem Header="Сохранить" Click="clkSave"/>
+                <MenuItem Header="Сохранить как" Click="clkSaveAs"/>
+            </MenuItem>
         </Menu>
-        <TextBox x:Name="tbEditor" Background="#19FFFFFF" FontSize="20" FontFamily="/WpfApp;component/Resources/#IBM Plex Sans Medium"/>
+        <TextBox x:Name="tbEditor" Background="#19FFFFFF" FontSize="20"/>
     </DockPanel>
 </Window>
