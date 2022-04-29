@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button Content="Задание 1: 5 окон" Click="expression1"/>
-        <Button Content="Задание 2: 8 Ball"/>
+        <Button Content="Задание 2: 8 Ball" Click="expression2"/>
         <Button Content="Задание 3: Текстовый редактор"/>
     </StackPanel>
 </Window>

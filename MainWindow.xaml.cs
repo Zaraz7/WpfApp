@@ -50,5 +50,9 @@ namespace WpfApp
 
         }
 
+        private void expression2(object sender, RoutedEventArgs e)
+        {
+            new Pages.Ball().ShowDialog();
+        }
     }
 }

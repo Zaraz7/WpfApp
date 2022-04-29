@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp.Pages"
         mc:Ignorable="d"
-        Title="Ball" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Ball" Height="350" Width="350" Background="Transparent" AllowsTransparency="True" WindowStyle="None" MouseLeftButtonDown="mouseLeftButtonDown">
+    <Border Background="#222"
+            CornerRadius="250"
+            BorderThickness="2">
+        <Grid>
+            <Button Margin="86,43,81,145" Background="Transparent" Click="Prediction" BorderThickness="0">
+                <Border Background="#BBB"
+                        CornerRadius="250">
+                    <Grid Width="170" Height="150">
+                        <TextBlock x:Name="textButton" Text="Жми" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Padding="5" TextWrapping="Wrap"/>
+                </Grid>
+                </Border>
+            </Button>
+            <TextBox x:Name="textBox" Margin="75,215,65,94"/>
+            <Button Content="X" Click="CloseClick" Margin="75,267,245,54" RenderTransformOrigin="0.448,0.992" Background="#333" BorderThickness="0"/>
+        </Grid>
+    </Border>
 </Window>

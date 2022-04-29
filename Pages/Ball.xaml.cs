@@ -19,9 +19,37 @@ namespace WpfApp.Pages
     /// </summary>
     public partial class Ball : Window
     {
+        private List<string> Predictions = new List<string>();
         public Ball()
         {
+            Predictions.Add("Нет");
+            Predictions.Add("Да");
+            Predictions.Add("Наверное");
+            Predictions.Add("50%");
+            Predictions.Add("Че?");
+            Predictions.Add("ААХХААХХАХАХА");
+            Predictions.Add("Лучше не спрашивай");
+            Predictions.Add("...");
             InitializeComponent();
+
+        }
+
+        private void CloseClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void mouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Prediction(object sender, RoutedEventArgs e)
+        {
+            Random r = new Random();
+            textBox.Text = "";
+            textButton.Text = Predictions[r.Next(8)];
+            
         }
     }
 }
