@@ -23,6 +23,38 @@ namespace WpfApp
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void NewExecute(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+
+        private void OpenExecute(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+        private void SaveExecute(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+        private void CloseExecute(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+
+        private void CutExecute(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+        private void CopyExecute(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+        private void PasteExecute(object sender, ExecutedRoutedEventArgs e)
+        {
+
         }
     }
 }

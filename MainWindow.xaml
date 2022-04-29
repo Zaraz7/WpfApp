@@ -6,7 +6,36 @@
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="NewExecute"/>
+        <CommandBinding Command="New" Executed="OpenExecute"/>
+        <CommandBinding Command="New" Executed="SaveExecute"/>
+        <CommandBinding Command="New" Executed="CloseExecute"/>
+        <CommandBinding Command="New" Executed="CutExecute"/>
+        <CommandBinding Command="New" Executed="CopyExecute"/>
+        <CommandBinding Command="New" Executed="PasteExecute"/>
+    </Window.CommandBindings>
+    <TabControl>
+        <TabItem Name="tiExp1" Header="Задание 1-2">
+            <DockPanel>
+                <Menu DockPanel.Dock="Top" Height="22">
+                    <MenuItem Header="Файл">
+                        <MenuItem Command="New"/>
+                        <MenuItem Command="Open"/>
+                        <MenuItem Command="Save"/>
+                        <MenuItem Command="Close"/>
+                    </MenuItem>
+                    <MenuItem Header="Правка">
+                        <MenuItem Command="Cut"/>
+                        <MenuItem Command="Copy"/>
+                        <MenuItem Command="Paste"/>
+                    </MenuItem>
+                </Menu>
+                <TextBox/>
+            </DockPanel>
+        </TabItem>
+        <TabItem Header="Задание 3">
+            
+        </TabItem>
+    </TabControl>
 </Window>
