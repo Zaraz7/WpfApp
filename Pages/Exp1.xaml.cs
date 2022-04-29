@@ -23,7 +23,11 @@ namespace WpfApp.Pages
         public Exp1()
         {
             InitializeComponent();
+            Left = Properties.Settings.Default.Exp11.Left;
         }
+
+        
+
         // Вместо того, чтобы закрывать окна, они становяться скрытыми
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {

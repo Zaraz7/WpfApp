@@ -22,5 +22,65 @@ namespace WpfApp.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0,0,0,0")]
+        public global::System.Windows.Rect BallPosition {
+            get {
+                return ((global::System.Windows.Rect)(this["BallPosition"]));
+            }
+            set {
+                this["BallPosition"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0,0,0,0")]
+        public global::System.Windows.Rect EditorPosition {
+            get {
+                return ((global::System.Windows.Rect)(this["EditorPosition"]));
+            }
+            set {
+                this["EditorPosition"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0,0,0,0")]
+        public global::System.Windows.Rect Exp11 {
+            get {
+                return ((global::System.Windows.Rect)(this["Exp11"]));
+            }
+            set {
+                this["Exp11"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0,0,0,0")]
+        public global::System.Windows.Rect Exp12 {
+            get {
+                return ((global::System.Windows.Rect)(this["Exp12"]));
+            }
+            set {
+                this["Exp12"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0,0,0,0")]
+        public global::System.Windows.Rect Exp13 {
+            get {
+                return ((global::System.Windows.Rect)(this["Exp13"]));
+            }
+            set {
+                this["Exp13"] = value;
+            }
+        }
     }
 }
