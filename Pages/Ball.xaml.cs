@@ -30,12 +30,17 @@ namespace WpfApp.Pages
             Predictions.Add("ААХХААХХАХАХА");
             Predictions.Add("Лучше не спрашивай");
             Predictions.Add("...");
+            
             InitializeComponent();
 
+            Left = Properties.Settings.Default.BallPosition.Left;
+            Top = Properties.Settings.Default.BallPosition.Top;
         }
 
         private void CloseClick(object sender, RoutedEventArgs e)
         {
+            Properties.Settings.Default.BallPosition = RestoreBounds;
+            Properties.Settings.Default.Save();
             this.Close();
         }
 
