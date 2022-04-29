@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+using System.Diagnostics;
+
 
 namespace WpfApp
 {
@@ -20,6 +23,8 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private OpenFileDialog _openDialog = new OpenFileDialog();
+        private SaveFileDialog _saveDialog = new SaveFileDialog();
         public MainWindow()
         {
             InitializeComponent();
@@ -28,20 +33,34 @@ namespace WpfApp
 
         private void NewExecute(object sender, ExecutedRoutedEventArgs e)
         {
-
+            _saveDialog.FileName = "new_file.txt";
+            if (_saveDialog.ShowDialog() == true)
+                return;
         }
 
         private void OpenExecute(object sender, ExecutedRoutedEventArgs e)
         {
-
+            if (_openDialog.ShowDialog() == true)
+                return;
         }
         private void SaveExecute(object sender, ExecutedRoutedEventArgs e)
         {
-
+            if (_saveDialog.FileName == "")
+                return;
+            if (_saveDialog.ShowDialog() == true)
+                return;
         }
         private void CloseExecute(object sender, ExecutedRoutedEventArgs e)
         {
-
+            var resoult = MessageBox.Show("Закрыть редактор с несохраненными изменниями?", "Подверждение действия", MessageBoxButton.YesNoCancel);
+            Debug.WriteLine(resoult);
+            switch (resoult)
+            {
+                case MessageBoxResult.Yes:
+                    
+                    break;
+            }
+             
         }
 
         private void CutExecute(object sender, ExecutedRoutedEventArgs e)
