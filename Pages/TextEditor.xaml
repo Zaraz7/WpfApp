@@ -23,6 +23,6 @@
                 <MenuItem Header="Сохранить как" Click="clkSaveAs"/>
             </MenuItem>
         </Menu>
-        <TextBox x:Name="tbEditor" Background="#19FFFFFF" FontSize="20"/>
+        <TextBox x:Name="tbEditor" Background="#81000000" TextWrapping="Wrap" AcceptsReturn="True" FontSize="20"/>
     </DockPanel>
 </Window>
