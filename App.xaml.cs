@@ -20,8 +20,6 @@ namespace WpfApp
             MenuItem menu = (MenuItem)sender;
             string font = menu.Header.ToString();
             Debug.WriteLine(font);
-            //var rd = new ResourceDictionary();
-            //rd.Add("Editor")
         }
     }
 }
