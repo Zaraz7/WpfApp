@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using System.IO;
 using System.Diagnostics;
 
 
@@ -35,13 +36,22 @@ namespace WpfApp
         {
             _saveDialog.FileName = "new_file.txt";
             if (_saveDialog.ShowDialog() == true)
-                Debug.WriteLine("New");
+            {
+                StreamWriter writer = new StreamWriter(_saveDialog.FileName);
+                writer.WriteLine(tbEditor.Text);
+                writer.Close();
+            }
         }
 
         private void OpenExecute(object sender, ExecutedRoutedEventArgs e)
         {
             if (_openDialog.ShowDialog() == true)
-                Debug.WriteLine("Open");
+            {
+                StreamReader reader = new StreamReader(_openDialog.FileName);
+                tbEditor.Text = reader.ReadToEnd();
+                reader.Close();
+                _saveDialog.FileName = _openDialog.FileName;
+            }
         }
         private void SaveExecute(object sender, ExecutedRoutedEventArgs e)
         {
@@ -57,9 +67,10 @@ namespace WpfApp
             {
                 case MessageBoxResult.Yes:
                     SaveExecute(sender, e);
+                    Close();
                     break;
                 case MessageBoxResult.No:
-                    Debug.WriteLine("Close No");
+                    Close();
                     break;
                 case MessageBoxResult.Cancel:
                     break;

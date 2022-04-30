@@ -31,7 +31,7 @@
                         <MenuItem Command="Paste"/>
                     </MenuItem>
                 </Menu>
-                <TextBox/>
+                <TextBox x:Name="tbEditor" TextWrapping="Wrap" AcceptsReturn="True"/>
             </DockPanel>
         </TabItem>
         <TabItem Header="Задание 3">
