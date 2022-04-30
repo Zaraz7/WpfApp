@@ -26,6 +26,7 @@ namespace WpfApp
     {
         private OpenFileDialog _openDialog = new OpenFileDialog();
         private SaveFileDialog _saveDialog = new SaveFileDialog();
+        private bool isDirty = false; // отвечает на вопрос, есть ли не сохранненые изменения?
         public MainWindow()
         {
             InitializeComponent();
@@ -58,37 +59,35 @@ namespace WpfApp
             if (_saveDialog.FileName == "") {
                 NewExecute(sender, e);
             }
+            isDirty = false;
         }
         private void CloseExecute(object sender, ExecutedRoutedEventArgs e)
         {
-            var resoult = MessageBox.Show("Сохранить изменения перед закрытием?", "Подверждение действия", MessageBoxButton.YesNoCancel);
-            Debug.WriteLine(resoult);
-            switch (resoult)
+            if (isDirty)
             {
-                case MessageBoxResult.Yes:
-                    SaveExecute(sender, e);
-                    Close();
-                    break;
-                case MessageBoxResult.No:
-                    Close();
-                    break;
-                case MessageBoxResult.Cancel:
-                    break;
+                var resoult = MessageBox.Show("Сохранить изменения перед закрытием?", "Подверждение действия", MessageBoxButton.YesNoCancel);
+                Debug.WriteLine(resoult);
+                switch (resoult)
+                {
+                    case MessageBoxResult.Yes:
+                        SaveExecute(sender, e);
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+                    case MessageBoxResult.Cancel:
+                        return;
+                }
             }
-             
+            Close();
         }
 
-        private void CutExecute(object sender, ExecutedRoutedEventArgs e)
+        private void CutExecute(object sender, ExecutedRoutedEventArgs e) { }
+        private void CopyExecute(object sender, ExecutedRoutedEventArgs e) { }
+        private void PasteExecute(object sender, ExecutedRoutedEventArgs e) { }
+
+        private void Editor_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Debug.WriteLine("Cut");
-        }
-        private void CopyExecute(object sender, ExecutedRoutedEventArgs e)
-        {
-            Debug.WriteLine("Copy");
-        }
-        private void PasteExecute(object sender, ExecutedRoutedEventArgs e)
-        {
-            Debug.WriteLine("Paste");
+            isDirty = true;
         }
     }
 }
