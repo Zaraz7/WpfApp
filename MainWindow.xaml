@@ -23,6 +23,7 @@
                         <MenuItem Command="New"/>
                         <MenuItem Command="Open"/>
                         <MenuItem Command="Save"/>
+                        <Separator/>
                         <MenuItem Command="Close"/>
                     </MenuItem>
                     <MenuItem Header="Правка">
