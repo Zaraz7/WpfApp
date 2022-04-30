@@ -15,8 +15,6 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.IO;
 using System.Diagnostics;
-using Microsoft.VisualBasic;
-
 
 namespace WpfApp
 {
@@ -28,15 +26,15 @@ namespace WpfApp
         private OpenFileDialog _openDialog = new OpenFileDialog();
         private SaveFileDialog _saveDialog = new SaveFileDialog();
         private bool isDirty = false; // отвечает на вопрос, есть ли не сохранненые изменения?
-        private enum Profiles { 
-            None,
-            Trial,
-            Pro
-        } // профиль
+
+        private Profiles Profile; // профиль
         public MainWindow()
         {
             InitializeComponent();
-            //;
+
+            var inputWindow = new InputWindow();
+            inputWindow.ShowDialog();
+            Profile = inputWindow.Profile;
         }
 
         private void NewExecute(object sender, ExecutedRoutedEventArgs e)
@@ -103,7 +101,7 @@ namespace WpfApp
 
         private void IsTrial(object sender, CanExecuteRoutedEventArgs e)
         {
-            if (true)
+            if ((Profile & Profiles.Trial) == Profiles.Trial)
                 e.CanExecute = true;
             else
                 e.CanExecute = false;
@@ -111,7 +109,7 @@ namespace WpfApp
 
         private void IsPro(object sender, CanExecuteRoutedEventArgs e)
         {
-            if (true)
+            if ((Profile & Profiles.Pro) == Profiles.Pro)
                 e.CanExecute = true;
             else
                 e.CanExecute = false;
