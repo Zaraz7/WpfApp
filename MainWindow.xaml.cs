@@ -89,5 +89,10 @@ namespace WpfApp
         {
             isDirty = true;
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
     }
 }
