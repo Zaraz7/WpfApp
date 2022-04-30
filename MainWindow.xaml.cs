@@ -35,29 +35,33 @@ namespace WpfApp
         {
             _saveDialog.FileName = "new_file.txt";
             if (_saveDialog.ShowDialog() == true)
-                return;
+                Debug.WriteLine("New");
         }
 
         private void OpenExecute(object sender, ExecutedRoutedEventArgs e)
         {
             if (_openDialog.ShowDialog() == true)
-                return;
+                Debug.WriteLine("Open");
         }
         private void SaveExecute(object sender, ExecutedRoutedEventArgs e)
         {
-            if (_saveDialog.FileName == "")
-                return;
-            if (_saveDialog.ShowDialog() == true)
-                return;
+            if (_saveDialog.FileName == "") {
+                NewExecute(sender, e);
+            }
         }
         private void CloseExecute(object sender, ExecutedRoutedEventArgs e)
         {
-            var resoult = MessageBox.Show("Закрыть редактор с несохраненными изменниями?", "Подверждение действия", MessageBoxButton.YesNoCancel);
+            var resoult = MessageBox.Show("Сохранить изменения перед закрытием?", "Подверждение действия", MessageBoxButton.YesNoCancel);
             Debug.WriteLine(resoult);
             switch (resoult)
             {
                 case MessageBoxResult.Yes:
-                    
+                    SaveExecute(sender, e);
+                    break;
+                case MessageBoxResult.No:
+                    Debug.WriteLine("Close No");
+                    break;
+                case MessageBoxResult.Cancel:
                     break;
             }
              
@@ -65,15 +69,15 @@ namespace WpfApp
 
         private void CutExecute(object sender, ExecutedRoutedEventArgs e)
         {
-
+            Debug.WriteLine("Cut");
         }
         private void CopyExecute(object sender, ExecutedRoutedEventArgs e)
         {
-
+            Debug.WriteLine("Copy");
         }
         private void PasteExecute(object sender, ExecutedRoutedEventArgs e)
         {
-
+            Debug.WriteLine("Paste");
         }
     }
 }
