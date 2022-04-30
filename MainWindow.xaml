@@ -7,16 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
     <Window.CommandBindings>
-        <CommandBinding Command="New" Executed="NewExecute"/>
-        <CommandBinding Command="Open" Executed="OpenExecute"/>
-        <CommandBinding Command="Save" Executed="SaveExecute"/>
-        <CommandBinding Command="Close" Executed="CloseExecute"/>
-        <CommandBinding Command="Cut" Executed="CutExecute"/>
-        <CommandBinding Command="Copy" Executed="CopyExecute"/>
-        <CommandBinding Command="Paste" Executed="PasteExecute"/>
+        <CommandBinding Command="New" Executed="NewExecute" CanExecute="IsTrial"/>
+        <CommandBinding Command="Open" Executed="OpenExecute" CanExecute="IsTrial"/>
+        <CommandBinding Command="Save" Executed="SaveExecute" CanExecute="IsTrial"/>
+        <CommandBinding Command="Close" Executed="CloseExecute" CanExecute="IsTrial"/>
+        <CommandBinding Command="Cut" Executed="CutExecute" CanExecute="IsPro"/>
+        <CommandBinding Command="Copy" Executed="CopyExecute" CanExecute="IsPro"/>
+        <CommandBinding Command="Paste" Executed="PasteExecute" CanExecute="IsPro"/>
     </Window.CommandBindings>
     <TabControl>
-        <TabItem Name="tiExp1" Header="Задание 1-2">
+        <TabItem Name="tiExp1" Header="Задание 1-3">
             <DockPanel>
                 <Menu DockPanel.Dock="Top" Height="22">
                     <MenuItem Header="Файл">
@@ -35,9 +35,6 @@
                 <TextBox x:Name="tbEditor" TextWrapping="Wrap" 
                          AcceptsReturn="True" TextChanged="Editor_TextChanged"/>
             </DockPanel>
-        </TabItem>
-        <TabItem Header="Задание 3">
-            
         </TabItem>
     </TabControl>
 </Window>

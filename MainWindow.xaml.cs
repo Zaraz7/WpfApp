@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.IO;
 using System.Diagnostics;
+using Microsoft.VisualBasic;
 
 
 namespace WpfApp
@@ -27,10 +28,15 @@ namespace WpfApp
         private OpenFileDialog _openDialog = new OpenFileDialog();
         private SaveFileDialog _saveDialog = new SaveFileDialog();
         private bool isDirty = false; // отвечает на вопрос, есть ли не сохранненые изменения?
+        private enum Profiles { 
+            None,
+            Trial,
+            Pro
+        } // профиль
         public MainWindow()
         {
             InitializeComponent();
-
+            //;
         }
 
         private void NewExecute(object sender, ExecutedRoutedEventArgs e)
@@ -93,6 +99,22 @@ namespace WpfApp
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
+        }
+
+        private void IsTrial(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (true)
+                e.CanExecute = true;
+            else
+                e.CanExecute = false;
+        }
+
+        private void IsPro(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (true)
+                e.CanExecute = true;
+            else
+                e.CanExecute = false;
         }
     }
 }
